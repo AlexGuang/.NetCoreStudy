@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "s3ezJfEIeM3oHiiKkBOJ3l7efW4lQqFYlawbmwjd3OysjgcJOiDr1Jbiz5MsKxR0uzPAPfYlCT1tOQT615EU8A==",
+  "dgSpecHash": "2znRm6M+Bgy9r/Vhd+VpaQmIzIYs7qyDIY8m2Rv8L/QIhk+jphzRwudI0fzLRjdF4QylGDm+Wh05XrkBNf8N8A==",
   "success": true,
-  "projectFilePath": "E:\\Annnew Studio\\.NET CORE\\.net Code\\BulkyBook\\BulkyBookWeb\\BulkyBookWeb.csproj",
+  "projectFilePath": "E:\\Annnew Studio\\.NET CORE\\.net Code\\.NetCoreStudy\\BulkyBook\\BulkyBookWeb\\BulkyBookWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ricky\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\6.0.4\\microsoft.aspnetcore.mvc.razor.extensions.6.0.4.nupkg.sha512",
     "C:\\Users\\Ricky\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\6.0.4\\microsoft.aspnetcore.mvc.razor.runtimecompilation.6.0.4.nupkg.sha512",
