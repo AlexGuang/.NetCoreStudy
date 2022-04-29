@@ -4,16 +4,16 @@
     "anonymousAuthentication": true, 
     "iisExpress": {
       "applicationUrl": "http://localhost:53216",
-      "sslPort": 0
+      "sslPort": 0//没有启用ssl
     }
   },
   "profiles": {
     "IIS Express": {
-      "commandName": "IISExpress",
-      "launchBrowser": true,
+      "commandName": "IISExpress",//通过iisexpress 启动项目 寻找iisexpress托管服务器
+      "launchBrowser": true,//通过浏览器进行加载
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+        "ASPNETCORE_ENVIRONMENT": "Development"//目前配置的所有信息都是指本地的
+      }//在开发环境， 测试环境，生产环境，预发布环境， 程序发布的密钥，数据库都是不同的，可以通过环境变量来隔离
     },
     "StudentManagement": {
       "commandName": "Project",
