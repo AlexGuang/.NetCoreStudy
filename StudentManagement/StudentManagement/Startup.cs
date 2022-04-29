@@ -28,7 +28,9 @@ namespace StudentManagement
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                DeveloperExceptionPageOptions developerExceptionPageOptions = new DeveloperExceptionPageOptions();
+                developerExceptionPageOptions.SourceCodeLineCount = 10;//对报错附近的代码显示，能够快速定位
+                app.UseDeveloperExceptionPage(developerExceptionPageOptions);
             }
             //DefaultFilesOptions defaultFilesOptions = new DefaultFilesOptions();//注册默认网页
 
@@ -43,17 +45,19 @@ namespace StudentManagement
            
             //index.html index.htm 默认 default.html default.htm
 
-            FileServerOptions fileServerOptions = new FileServerOptions();
-            fileServerOptions.DefaultFilesOptions.DefaultFileNames.Clear();
-            fileServerOptions.DefaultFilesOptions.DefaultFileNames.Add("52ab.html");
+            //FileServerOptions fileServerOptions = new FileServerOptions();
+            //fileServerOptions.DefaultFilesOptions.DefaultFileNames.Clear();
+            //fileServerOptions.DefaultFilesOptions.DefaultFileNames.Add("52ab.html");
 
-            app.UseFileServer(fileServerOptions);
+            //app.UseFileServer(fileServerOptions); 终端中间件
 
 
 
             app.Run(async (context) =>
             {
-               await context.Response.WriteAsync("Hello world");
+                throw new Exception("您的轻轻在管道中发生了一些错误，请检查");
+                
+                await context.Response.WriteAsync("Hello world");
             });
         }
     }
