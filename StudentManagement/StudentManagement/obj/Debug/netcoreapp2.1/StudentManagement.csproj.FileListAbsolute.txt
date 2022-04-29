@@ -14,3 +14,6 @@ E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentMana
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\StudentManagement.dll
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\StudentManagement.pdb
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\StudentManagement.genruntimeconfig.cache
+E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\bin\Debug\netcoreapp2.1\appsettings.json
+E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\bin\Debug\netcoreapp2.1\appsettings.Development.json
+E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs
