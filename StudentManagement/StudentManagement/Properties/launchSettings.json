@@ -16,7 +16,7 @@
         "MyKey": "appsetting..launchSetting.json MyKey " //目前配置的所有信息都是指本地的
       }, //在开发环境， 测试环境，生产环境，预发布环境， 程序发布的密钥，数据库都是不同的，可以通过环境变量来隔离
      
-    },
+    },//开发环境（development) 集成环境（integration) 测试环境（testing)QA验证，模拟环境/预发布环境（staging),生产环境（production)
     "StudentManagement": {
       "commandName": "Project",
       "launchBrowser": true,

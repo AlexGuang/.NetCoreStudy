@@ -26,12 +26,25 @@ namespace StudentManagement
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (env.IsDevelopment())
+            if (env.IsEnvironment("UAT"))//如果开发环境是用户验收环境
             {
-                DeveloperExceptionPageOptions developerExceptionPageOptions = new DeveloperExceptionPageOptions();
-                developerExceptionPageOptions.SourceCodeLineCount = 10;//对报错附近的代码显示，能够快速定位
-                app.UseDeveloperExceptionPage(developerExceptionPageOptions);
+                app.UseDeveloperExceptionPage();//可以显示开发者异常页面
             }
+            else if (env.IsDevelopment())
+            {
+                #region 开发者异常界面
+                //  DeveloperExceptionPageOptions developerExceptionPageOptions = new DeveloperExceptionPageOptions();
+                // developerExceptionPageOptions.SourceCodeLineCount = 10;//对报错附近的代码显示，能够快速定位
+                //  app.UseDeveloperExceptionPage(developerExceptionPageOptions);
+                #endregion
+                app.UseDeveloperExceptionPage();
+            }
+            else if (env.IsStaging()||env.IsProduction()||env.IsEnvironment("UAT"))
+            {
+                app.UseExceptionHandler("/Error");
+
+            }
+            #region 中间件和静态文件学习
             //DefaultFilesOptions defaultFilesOptions = new DefaultFilesOptions();//注册默认网页
 
             //defaultFilesOptions.DefaultFileNames.Clear();
@@ -42,7 +55,7 @@ namespace StudentManagement
             //app.UseDefaultFiles();
             //添加静态文件中间件
             //app.UseStaticFiles();
-           
+
             //index.html index.htm 默认 default.html default.htm
 
             //FileServerOptions fileServerOptions = new FileServerOptions();
@@ -50,14 +63,15 @@ namespace StudentManagement
             //fileServerOptions.DefaultFilesOptions.DefaultFileNames.Add("52ab.html");
 
             //app.UseFileServer(fileServerOptions); 终端中间件
+            #endregion
+            app.UseStaticFiles();
 
 
 
             app.Run(async (context) =>
             {
-                throw new Exception("您的轻轻在管道中发生了一些错误，请检查");
-                
-                await context.Response.WriteAsync("Hello world");
+               // throw new Exception("您的轻轻在管道中发生了一些错误，请检查");                
+                await context.Response.WriteAsync("Hosting Environment:"+env.EnvironmentName);
             });
         }
     }
