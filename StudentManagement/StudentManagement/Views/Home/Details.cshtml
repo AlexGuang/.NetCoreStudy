@@ -1,5 +1,21 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@using StudentManagement.Models
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>@ViewData["PageTitle"]</h3>
+        @{
+            var student = ViewData["Student"] as Student;
+        }
+        <div>
+            姓名：@student.Name
+        </div>
+        <div>
+            邮箱：@student.Email
+        </div>
+        <div>
+            班级名称：@student.ClassName
+        </div>
+    </body>
+</html>

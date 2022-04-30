@@ -17,8 +17,11 @@ namespace StudentManagement.Controllers
         }
         public IActionResult Details()
         {
+            ViewData["PageTitle"] = "学生信息";
+                
             Student model = _studentRepository.GetStudent(1);
-            return View(model);
+            ViewData["Student"] = model;
+            return View();
         }
     }
 }
