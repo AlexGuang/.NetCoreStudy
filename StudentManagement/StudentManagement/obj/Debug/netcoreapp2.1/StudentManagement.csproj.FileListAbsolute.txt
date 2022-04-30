@@ -16,3 +16,12 @@ E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentMana
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\StudentManagement.genruntimeconfig.cache
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\bin\Debug\netcoreapp2.1\appsettings.json
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\bin\Debug\netcoreapp2.1\appsettings.Development.json
+E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\bin\Debug\netcoreapp2.1\StudentManagement.Views.dll
+E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\bin\Debug\netcoreapp2.1\StudentManagement.Views.pdb
+E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\StudentManagement.TagHelpers.input.cache
+E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\StudentManagement.TagHelpers.output.cache
+E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\StudentManagement.RazorCoreGenerate.cache
+E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Details.cshtml.g.cs
+E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\StudentManagement.RazorTargetAssemblyInfo.cs
+E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\StudentManagement.Views.pdb
+E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\StudentManagement.csproj.CopyComplete

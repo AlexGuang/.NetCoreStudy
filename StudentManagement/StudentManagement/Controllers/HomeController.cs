@@ -15,5 +15,10 @@ namespace StudentManagement.Controllers
             return _studentRepository.GetStudent(1).Name;
 
         }
+        public IActionResult Details()
+        {
+            Student model = _studentRepository.GetStudent(1);
+            return View(model);
+        }
     }
 }

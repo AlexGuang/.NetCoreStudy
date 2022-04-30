@@ -73,6 +73,7 @@ namespace StudentManagement
             {
                 app.UseDeveloperExceptionPage();
             }
+            
             app.UseStaticFiles();
 
             app.UseMvcWithDefaultRoute();
