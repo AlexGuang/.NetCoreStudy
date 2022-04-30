@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using StudentManagement.Models;
+using StudentManagement.ViewModels;
 
 namespace StudentManagement.Controllers
 {
@@ -17,11 +18,14 @@ namespace StudentManagement.Controllers
         }
         public IActionResult Details()
         {
-            ViewData["PageTitle"] = "学生信息";
-                
-            Student model = _studentRepository.GetStudent(1);
-            ViewData["Student"] = model;
-            return View();
+            
+            HomeDetailsViewModel homeDetailsViewModes = new HomeDetailsViewModel()
+            {
+                PageTitle = "学生信息",
+                Student = _studentRepository.GetStudent(3)
+
+            };
+            return View(homeDetailsViewModes);
         }
     }
 }
