@@ -19,6 +19,12 @@ namespace StudentManagement.Models
                 new Student(){Id = 4, Name ="赵五",ClassName="三年级四班", Email="zhaoshen@233.com"}
             };
         }
+
+        public IEnumerable<Student> GetAllStudent()
+        {
+            return _students;
+        }
+
         public Student GetStudent(int id)
         {
             return   _students.FirstOrDefault(a => a.Id == id);

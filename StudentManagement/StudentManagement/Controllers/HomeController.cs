@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using StudentManagement.Models;
 using StudentManagement.ViewModels;
+using System.Collections.Generic;
 
 namespace StudentManagement.Controllers
 {
@@ -11,9 +12,10 @@ namespace StudentManagement.Controllers
         {
             _studentRepository = istudentRepository;
         }
-        public string Index()
+        public IActionResult Index()
         {
-            return _studentRepository.GetStudent(1).Name;
+            IEnumerable<Student> students = _studentRepository.GetAllStudent();
+            return View(students);
 
         }
         public IActionResult Details()
