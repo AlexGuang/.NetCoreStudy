@@ -76,13 +76,13 @@ namespace StudentManagement
             
             app.UseStaticFiles();
 
-            app.UseMvcWithDefaultRoute();
+            // app.UseMvcWithDefaultRoute();
 
-            app.Run(async (context) =>
-            {
-               // throw new Exception("您的轻轻在管道中发生了一些错误，请检查");                
-                await context.Response.WriteAsync("Hello world!");
-            });
+            //app.UseMvc(routes =>
+            //{
+            //    routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
+            //});
+            app.UseMvc();
         }
     }
 }
