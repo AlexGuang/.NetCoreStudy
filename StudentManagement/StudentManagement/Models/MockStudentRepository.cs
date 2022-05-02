@@ -13,10 +13,10 @@ namespace StudentManagement.Models
         {
             _students = new List<Student>()
             {
-                new Student(){Id = 1, Name ="张三",ClassName="一年级三班", Email="tony_zhang@233.com"},
-                new Student(){Id = 2, Name ="李四",ClassName="二年级一班", Email="mick_Li@233.com"},
-                new Student(){Id = 3, Name ="王二",ClassName="一年级五班", Email="hahah@233.com"},
-                new Student(){Id = 4, Name ="赵五",ClassName="三年级四班", Email="zhaoshen@233.com"}
+                new Student(){Id = 1, Name ="张三",ClassName=ClassNameEnum.FirstGrage, Email="tony_zhang@233.com"},
+                new Student(){Id = 2, Name ="李四",ClassName=ClassNameEnum.SecondGrage, Email="mick_Li@233.com"},
+                new Student(){Id = 3, Name ="王二",ClassName=ClassNameEnum.ThirdGrage, Email="hahah@233.com"},
+                new Student(){Id = 4, Name ="赵五",ClassName=ClassNameEnum.FourGrage, Email="zhaoshen@233.com"}
             };
         }
 

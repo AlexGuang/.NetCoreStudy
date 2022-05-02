@@ -30,3 +30,4 @@ E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentMana
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\bin\Debug\netcoreapp2.1\libman.json
+E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Create.cshtml.g.cs

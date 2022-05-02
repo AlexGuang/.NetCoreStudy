@@ -38,5 +38,9 @@ namespace StudentManagement.Controllers
             };
             return View(homeDetailsViewModes);
         }
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
