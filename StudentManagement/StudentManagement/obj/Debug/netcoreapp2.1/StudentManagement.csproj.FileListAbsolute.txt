@@ -27,3 +27,5 @@ E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentMana
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\StudentManagement.csproj.CopyComplete
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index.cshtml.g.cs
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.cshtml.g.cs
+E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.cshtml.g.cs
