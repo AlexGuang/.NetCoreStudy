@@ -12,6 +12,8 @@
     <div class="container">
         @RenderBody()
     </div>
+
+    <script src="~/lib/jquery//jquery.js"></script>
     @if(IsSectionDefined("Scripts"))
     {
         @RenderSection("Scripts",required:false)
