@@ -12,7 +12,8 @@ namespace StudentManagement.Models
         [Display(Name ="姓名")]
         public string Name { get; set; }
         [Display(Name ="班级信息")]
-        public ClassNameEnum ClassName { get; set; }
+        [Required(ErrorMessage ="请选择班级信息")]
+        public ClassNameEnum? ClassName { get; set; }
         [Display(Name="电子邮件")]
         [RegularExpression(@"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$",
             ErrorMessage ="邮箱的格式不正确")]
