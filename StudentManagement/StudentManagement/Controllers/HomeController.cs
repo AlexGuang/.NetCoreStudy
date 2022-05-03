@@ -38,9 +38,21 @@ namespace StudentManagement.Controllers
             };
             return View(homeDetailsViewModes);
         }
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult Create(Student student)
+        {
+            if (ModelState.IsValid)
+            {
+                Student newStudent = _studentRepository.AddNewStudent(student);
+                return RedirectToAction("Details", new { id = newStudent.Id });
+            }
+            return View();
+            
         }
     }
 }

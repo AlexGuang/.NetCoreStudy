@@ -8,5 +8,6 @@ namespace StudentManagement.Models
 
         IEnumerable<Student> GetAllStudent();
 
+        Student AddNewStudent(Student student);
     }
 }
