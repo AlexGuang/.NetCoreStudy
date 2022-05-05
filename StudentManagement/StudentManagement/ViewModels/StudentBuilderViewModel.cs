@@ -8,7 +8,7 @@ namespace StudentManagement.ViewModels
     public class StudentBuilderViewModel
     {
       
-        [Required(ErrorMessage = "请输入您的名字"), MaxLength(50, ErrorMessage = "名字的长度不能超过50个字符")]
+       [Required(ErrorMessage = "请输入您的名字"), MaxLength(50, ErrorMessage = "名字的长度不能超过50个字符")]
         [Display(Name = "姓名")]
         public string Name { get; set; }
         [Display(Name = "班级信息")]

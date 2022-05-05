@@ -124,7 +124,7 @@ namespace StudentManagement.Controllers
                 student.Name = studentEditViewModel.Name;
                 student.Email = studentEditViewModel.Email;
                 student.ClassName = studentEditViewModel.ClassName;
-                
+                student.PhotoPath = studentEditViewModel.ExistingPhotoPath;
                 if (studentEditViewModel.Photo!=null)
                 {
                     if (studentEditViewModel.ExistingPhotoPath != null)//
@@ -142,14 +142,16 @@ namespace StudentManagement.Controllers
                     {
                         studentEditViewModel.Photo.CopyTo(fs);
                     }*/
-                    string uniqueFileName = AddImage(studentEditViewModel);
+                     string uniqueFileName = AddImage(studentEditViewModel);
                     // studentEditViewModel.Photo.CopyTo(new FileStream(filePath, FileMode.Create));
-                    student.PhotoPath = uniqueFileName;
-                    Student updateStudent = _studentRepository.UpdateStudent(student);
 
-                    return RedirectToAction("Index");
-                    
+                    student.PhotoPath = uniqueFileName;
+
                 }
+                
+                Student updateStudent = _studentRepository.UpdateStudent(student);
+
+                return RedirectToAction("Index");
             }
             return View(studentEditViewModel);
         }
