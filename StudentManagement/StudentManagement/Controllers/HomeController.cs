@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Hosting.Internal;
+using Microsoft.AspNetCore.Mvc;
 using StudentManagement.Models;
 using StudentManagement.ViewModels;
+using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace StudentManagement.Controllers
 {
@@ -9,9 +12,12 @@ namespace StudentManagement.Controllers
     public class HomeController : Controller
     {
         private readonly IStudentRepository _studentRepository;
-        public HomeController(IStudentRepository istudentRepository)
+        private readonly HostingEnvironment hostingEnvironment;
+
+        public HomeController(IStudentRepository istudentRepository,HostingEnvironment hostingEnvironment)
         {
             _studentRepository = istudentRepository;
+            this.hostingEnvironment = hostingEnvironment;
         }
         
        
@@ -44,15 +50,35 @@ namespace StudentManagement.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Create(Student student)
+        public IActionResult Create(StudentBuilderViewModel model)
         {
             if (ModelState.IsValid)
             {
-                Student newStudent = _studentRepository.AddNewStudent(student);
+
+          
+                string uniqueFileName = null;
+                if (model.Photo!=null)
+                {
+                    string uploadsFolder = Path.Combine(hostingEnvironment.WebRootPath, "images");
+                    uniqueFileName = Guid.NewGuid().ToString() + "_" + model.Photo.FileName;
+                    string filePath= Path.Combine(uploadsFolder, uniqueFileName);
+                    model.Photo.CopyTo(new FileStream(filePath, FileMode.Create));
+                }
+
+                Student newStudent = new Student
+                {
+                    Name = model.Name,
+                    Email = model.Email,
+                    ClassName = model.ClassName,
+                    PhotoPath = uniqueFileName
+                };
+                _studentRepository.AddNewStudent(newStudent);
                 return RedirectToAction("Details", new { id = newStudent.Id });
+
+                    //Student newStudent = _studentRepository.AddNewStudent(student);
+                    //
             }
             return View();
-            
         }
     }
 }
