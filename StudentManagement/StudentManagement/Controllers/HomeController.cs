@@ -175,7 +175,17 @@ namespace StudentManagement.Controllers
             return uniqueFileName;
         }
 
-
+        public IActionResult Delete(int id)
+        {
+            Student deletingStudent = _studentRepository.GetStudent(id);
+            if (deletingStudent.PhotoPath!=null)
+            {
+                string filePath = Path.Combine(hostingEnvironment.WebRootPath, "images", deletingStudent.PhotoPath);
+                System.IO.File.Delete(filePath);
+            }
+            _studentRepository.DeleteStudent(id);
+            return RedirectToAction("Index");
+        }
 
     }
 }
