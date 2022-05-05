@@ -54,16 +54,18 @@ namespace StudentManagement.Controllers
         {
             if (ModelState.IsValid)
             {
+               string uniqueFileName = AddImage(model);
 
-          
-                string uniqueFileName = null;
-                if (model.Photo != null)
-                {
-                    string uploadsFolder = Path.Combine(hostingEnvironment.WebRootPath, "images");
-                    uniqueFileName = Guid.NewGuid().ToString() + "_" + model.Photo.FileName;
-                    string filePath = Path.Combine(uploadsFolder, uniqueFileName);
-                    model.Photo.CopyTo(new FileStream(filePath, FileMode.Create));
-                }
+                /* string uniqueFileName = null;
+                 if (model.Photo != null)
+                 {
+                     string uploadsFolder = Path.Combine(hostingEnvironment.WebRootPath, "images");
+                     uniqueFileName = Guid.NewGuid().ToString() + "_" + model.Photo.FileName;
+                     string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                     model.Photo.CopyTo(new FileStream(filePath, FileMode.Create));
+                 }*/
+
+
                 //if (model.Photos!=null&&model.Photos.Count>0)
                 //{
                 //    foreach (var photo in model.Photos)
@@ -115,39 +117,63 @@ namespace StudentManagement.Controllers
         [HttpPost]
         public IActionResult Edit(StudentEditViewModel studentEditViewModel)
         {
-            if (ModelState.IsValid)//模型验证，保证能通过模型验证
-            {
+            if (ModelState.IsValid)//模型验证，保证能通过模型验证 
+            {//检查提供的数据是否有效，如果没有通过验证，需要重新编辑学生信息，这样用户就可以更正并从新提交编辑表单
                 Student student = _studentRepository.GetStudent(studentEditViewModel.Id);
 
                 student.Name = studentEditViewModel.Name;
                 student.Email = studentEditViewModel.Email;
                 student.ClassName = studentEditViewModel.ClassName;
-
+                
                 if (studentEditViewModel.Photo!=null)
                 {
-                    if (studentEditViewModel.ExistingPhotoPath!=null)
+                    if (studentEditViewModel.ExistingPhotoPath != null)//
                     {
                         string filePath = Path.Combine(hostingEnvironment.WebRootPath, "images", studentEditViewModel.ExistingPhotoPath);
                         System.IO.File.Delete(filePath);
-
-                        string uniqueFileName = null;                        
-                        
-                        string uploadsFolder = Path.Combine(hostingEnvironment.WebRootPath, "images");
-                        uniqueFileName = Guid.NewGuid().ToString() + "_" + studentEditViewModel.Photo.FileName;
-                        filePath = Path.Combine(uploadsFolder, uniqueFileName);
-                        using(FileStream fs = new FileStream(filePath, FileMode.Create))
-                        {
-                            studentEditViewModel.Photo.CopyTo(fs);
-                        }
-                        // studentEditViewModel.Photo.CopyTo(new FileStream(filePath, FileMode.Create));
-                        _studentRepository.UpdateStudent(student);
-
                     }
+                    /*
+                    string uniqueFileName = null;                        
+                        
+                    string uploadsFolder = Path.Combine(hostingEnvironment.WebRootPath, "images");
+                    uniqueFileName = Guid.NewGuid().ToString() + "_" + studentEditViewModel.Photo.FileName;
+                    string fileNewPath = Path.Combine(uploadsFolder, uniqueFileName);
+                    using(FileStream fs = new FileStream(fileNewPath, FileMode.Create))
+                    {
+                        studentEditViewModel.Photo.CopyTo(fs);
+                    }*/
+                    string uniqueFileName = AddImage(studentEditViewModel);
+                    // studentEditViewModel.Photo.CopyTo(new FileStream(filePath, FileMode.Create));
+                    student.PhotoPath = uniqueFileName;
+                    Student updateStudent = _studentRepository.UpdateStudent(student);
+
+                    return RedirectToAction("Index");
+                    
                 }
             }
+            return View(studentEditViewModel);
         }
-
-
+        /// <summary>
+        /// 生成新图片的保存路径，并把新图片按照保存路径保存在项目中，把路径保存在数据库中
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        private string AddImage (StudentBuilderViewModel model)
+        {
+            string uniqueFileName = null;
+            if (model.Photo!=null)
+            {
+                string uploadsFolder = Path.Combine(hostingEnvironment.WebRootPath, "images");
+                uniqueFileName = Guid.NewGuid().ToString() + "_" + model.Photo.FileName;
+                string fileNewPath = Path.Combine(uploadsFolder, uniqueFileName);
+                using (FileStream fs = new FileStream(fileNewPath, FileMode.Create))
+                {
+                    model.Photo.CopyTo(fs);
+                }
+            }
+           
+            return uniqueFileName;
+        }
 
 
 
