@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Http;
 using StudentManagement.Models;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace StudentManagement.ViewModels
 {
     public class StudentBuilderViewModel
     {
-        public int Id { get; set; }
+      
         [Required(ErrorMessage = "请输入您的名字"), MaxLength(50, ErrorMessage = "名字的长度不能超过50个字符")]
         [Display(Name = "姓名")]
         public string Name { get; set; }
