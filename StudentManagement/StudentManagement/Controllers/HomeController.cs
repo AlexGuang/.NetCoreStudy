@@ -33,13 +33,20 @@ namespace StudentManagement.Controllers
        // [Route("")]
         
        // [Route("[action]/{id?}")]
-        public IActionResult Details(int? id)
+        public IActionResult Details(int id)
         {
-            
+            Student student = _studentRepository.GetStudent(id);
+            if (student==null)
+            {
+                Response.StatusCode = 404;
+                return View("StudentNotFound",id);
+
+            }
+            //实例化HomeDetailsViewModel并存储Student详细信息和PageTitle
             HomeDetailsViewModel homeDetailsViewModes = new HomeDetailsViewModel()
             {
                 PageTitle = "学生信息",
-                Student = _studentRepository.GetStudent(id??1)
+                Student = student
 
             };
             return View(homeDetailsViewModes);

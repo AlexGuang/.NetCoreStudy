@@ -75,15 +75,20 @@ namespace StudentManagement
             {
                 app.UseDeveloperExceptionPage();
             }
-            
+            else
+            {
+                app.UseStatusCodePagesWithRedirects("~/ERROR/{0}");//error是控制器，0是占位符，用于接受http请求中的统一的异常处理
+
+            }
+
             app.UseStaticFiles();
 
-           app.UseMvcWithDefaultRoute();
+            //   app.UseMvcWithDefaultRoute();
 
-            //app.UseMvc(routes =>
-            //{
-            //    routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
-            //});
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
+            });
             //app.UseMvc();
         }
     }
