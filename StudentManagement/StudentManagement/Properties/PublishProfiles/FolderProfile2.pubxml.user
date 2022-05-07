@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Ricky\OneDrive\桌面\fdg</_PublishTargetUrl>
+    <History>True|2022-05-07T01:46:44.2914506Z;True|2022-05-06T18:43:20.0268777+10:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="StudentDBConnection">
+      <Value>Server=%28localdb%29\MSSQLLocalDB%3bDatabase=StudentDB%3bTrusted_Connection=True</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="StudentManagement.Models.AppDbContext">
+      <Value>Server=%28localdb%29\MSSQLLocalDB%3bDatabase=StudentDB%3bTrusted_Connection=True</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
