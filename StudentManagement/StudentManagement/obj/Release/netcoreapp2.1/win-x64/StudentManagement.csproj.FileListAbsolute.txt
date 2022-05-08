@@ -34,3 +34,6 @@ E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentMana
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Release\netcoreapp2.1\win-x64\StudentManagement.pdb
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Release\netcoreapp2.1\win-x64\StudentManagement.genruntimeconfig.cache
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Release\netcoreapp2.1\win-x64\StudentManagement.csproj.CopyComplete
+E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\bin\Release\netcoreapp2.1\win-x64\hostpolicy.dll
+E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\bin\Release\netcoreapp2.1\win-x64\hostfxr.dll
+E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Release\netcoreapp2.1\win-x64\StudentManagement.csproj.AssemblyReference.cache

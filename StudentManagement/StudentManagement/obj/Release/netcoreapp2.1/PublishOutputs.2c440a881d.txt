@@ -8,6 +8,7 @@ E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentMana
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\images\a2046214-f534-40a3-8d0b-8277e17cf3be_2es.jpg
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\images\ANNNEWLogo3.png
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\images\c177f775-aff2-4068-bf5d-ab5296b594ad_8s.png
+E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\images\fb5d5162-a137-4812-93b3-dff4f49e7446_9s.png
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\images\yuan1.png
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\images\yuan2.png
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Release\netcoreapp2.1\PubTmp\Out\wwwroot\images\yuan3.png
