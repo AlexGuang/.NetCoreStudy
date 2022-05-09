@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
 
 namespace StudentManagement.Controllers
 {
@@ -14,6 +16,22 @@ namespace StudentManagement.Controllers
                     break;
             }
             return View("NotFound");
+        }
+        [AllowAnonymous]
+        [Route("Error")]
+        public IActionResult Error()
+        {
+            //获取异常细节
+            var exceptionHandlerPathFeature = HttpContext.Features.Get<IExceptionHandlerPathFeature>();
+
+            ViewBag.ErrorMessage = exceptionHandlerPathFeature.Error.Message;
+            ViewBag.ExceptionPath = exceptionHandlerPathFeature.Path;
+            ViewBag.StackTrace = exceptionHandlerPathFeature.Error.StackTrace;
+
+            return View("Error");
+
+
+
         }
     }
 }

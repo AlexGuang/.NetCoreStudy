@@ -35,6 +35,7 @@ namespace StudentManagement.Controllers
        // [Route("[action]/{id?}")]
         public IActionResult Details(int id)
         {
+            throw new Exception("此异常发生在Detail视图中");
             Student student = _studentRepository.GetStudent(id);
             if (student==null)
             {

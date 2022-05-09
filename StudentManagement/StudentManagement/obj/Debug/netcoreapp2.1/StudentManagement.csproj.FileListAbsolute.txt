@@ -34,3 +34,4 @@ E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentMana
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\Razor\Views\Home\Edit.cshtml.g.cs
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\Razor\Views\Home\StudentNotFound.cshtml.g.cs
 E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\Razor\Views\Error\NotFound.cshtml.g.cs
+E:\Annnew Studio\.NET CORE\.net Code\.NetCoreStudy\StudentManagement\StudentManagement\obj\Debug\netcoreapp2.1\Razor\Views\Error\Error.cshtml.g.cs

@@ -77,7 +77,9 @@ namespace StudentManagement
             }
             else
             {
-                app.UseStatusCodePagesWithRedirects("~/ERROR/{0}");//error是控制器，0是占位符，用于接受http请求中的统一的异常处理
+                app.UseExceptionHandler("/Error");//拦截我们的异常，程序本身的异常
+                app.UseStatusCodePagesWithReExecute("~/ERROR/{0}");//error是控制器，0是占位符，用于接受http请求中的统一的异常处理
+                                                                    //拦截404找不到页面信息
 
             }
 
