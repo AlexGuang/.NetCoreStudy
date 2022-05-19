@@ -1,1 +1,2 @@
-# .NetCoreStudy![2022-05-19_142211](https://user-images.githubusercontent.com/69067593/169204464-e46f7855-0cf2-442a-81ed-bf8d083dc3fe.png)
+
+![image](https://user-images.githubusercontent.com/69067593/169205082-66b21cc1-6ebc-4266-9927-467c6e6893bc.png)
