@@ -3,7 +3,7 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 
-<div class="card-deck">
+<div class="card">
  
     @foreach(var student in Model)
     {
@@ -14,7 +14,7 @@
                 <h3>@student.Name</h3>
             </div>
             
-            <img  class="card-top imagesThumbnail" src=@photoPath asp-append-version="true" />
+            <img  class="card-img-top imagesThumbnail" src=@photoPath asp-append-version="true" />
             <div class="card-footer text-center">
                 <a asp-controller="home" asp-action="details" asp-route-id="@student.Id" class="btn btn-primary m-1">查看</a>                
                 <a asp-controller="home" asp-action="edit" asp-route-id="@student.Id" class="btn btn-primary m-1">编辑</a>
