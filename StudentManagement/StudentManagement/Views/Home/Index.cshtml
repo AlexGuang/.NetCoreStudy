@@ -2,14 +2,14 @@
 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+<div class="row">
 
-<div class="card">
  
     @foreach(var student in Model)
     {
          var photoPath = "~/images/" + (student.PhotoPath ?? "yuan1.png");
       
-        <div class="card m-3">
+        <div class="card col-lg-4 col-sm-12">
             <div class ="card-header">
                 <h3>@student.Name</h3>
             </div>
